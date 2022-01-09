@@ -51,34 +51,37 @@ def tinh_thuong_MSSV(month,year,finish_level):
             HSThuong = 1.5
         return tinh_luong_MSSV(month,year)*HSThuong
 
-
-class VienChuc_TENSV:
-    
-    def __init__(self, ten, namsinh, gioitinh):
-        self.ten = ten
-        self.namsinh = namsinh
-        self.gioitinh = gioitinh
-        self.email = get_email_MSSV(self.ten)
-        self.tuoi = tinh_tuoi_MSSV(self.namsinh)
-    def __str__(self):
-        return self.ten +" "+ self.namsinh +" "+self.gioitinh
-     
-vc1 = VienChuc_TENSV("pham minh thang", "2001", "nam") # ví dụ
-vc2 = VienChuc_TENSV("giang the an", "1999", "nam")
-vc3 = VienChuc_TENSV("pho long an", "2003", "nam")
-
-lst = []
-lst.append(vc1)
-lst.append(vc2)
-lst.append(vc3)
-lst.sort(key=lambda x : x.namsinh,reverse= True) # sắp xếp theo độ tuổi giảm dần
-for i in lst:
-    print (i)
 class HopDong_HODEM:
     def __init__(self, month, year, type):
         self.month = month  #tháng gia nhập
         self.year = year    #năm gia nhập
         self.type = type    #loại hợp đồng (tập sự/chính thức/vô thời hạn)
+
+class VienChuc_TENSV:
+    
+    def __init__(self, ten, namsinh, gioitinh, hopdong):
+        self.ten = ten
+        self.namsinh = namsinh
+        self.gioitinh = gioitinh
+        self.email = get_email_MSSV(self.ten)
+        self.tuoi = tinh_tuoi_MSSV(self.namsinh)
+        self.hopdong = hopdong
+    def __str__(self):
+        return self.ten +" "+ self.namsinh +" "+self.gioitinh
+     
+
+vc1 = VienChuc_TENSV("pham minh thang", "2001", "nam", HopDong_HODEM(2,2001,"")) # ví dụ
+# vc2 = VienChuc_TENSV("giang the an", "1999", "nam")
+# vc3 = VienChuc_TENSV("pho long an", "2003", "nam")
+
+lst = []
+lst.append(vc1)
+# lst.append(vc2)
+# lst.append(vc3)
+lst.sort(key=lambda x : x.namsinh,reverse= True) # sắp xếp theo độ tuổi giảm dần
+for i in lst:
+    print (i.ten)
+
     
 # PHẦN THAO TÁC:
 
