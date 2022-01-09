@@ -1,5 +1,15 @@
 
 
+# PHẦN YÊU CẦU: Xây dựng 5 hàm và 2 Class
+# 5 hàm: 
+    # tinh_tuoi_MSSV
+    # get_email_MSSV
+    # tinh_thang_MSSV
+    # tinh_luong_MSSV
+    # tinh_thuong_MSSV
+# 2 class:
+    # VienChuc_TENSV
+    # HopDong_HODEM
 
 def tinh_tuoi_MSSV(namsinh):
     return 2021 - int(namsinh)
@@ -65,7 +75,16 @@ lst.sort(key=lambda x : x[1],reverse= False)
 for i in lst:
     print (i)
 class HopDong_HODEM:
-    pass
+    def __init__(self, month, year, type):
+        self.month = month  #tháng gia nhập
+        self.year = year    #năm gia nhập
+        self.type = type    #loại hợp đồng (tập sự/chính thức/vô thời hạn)
+    
+# PHẦN THAO TÁC:
+
+
+
+
 # Sap xep dua theo do tuoi 
 # input(arr)
 # output(arr da sap xep)
