@@ -11,3 +11,4 @@ def get_email_MSSV(ten):
 
 def tinh_thang_MSSV(thang , nam):
     return (2021 - int(nam))*12 - int(thang )+ 12
+
