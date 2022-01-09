@@ -80,7 +80,13 @@ class VienChuc_TENSV:
 # PHẦN THAO TÁC:
 
     #Phần 1: Nhập liệu
-vc1 = VienChuc_TENSV("pham minh thang", "2001", "nam", HopDong_HODEM(2,2001,""))
+vc1 = VienChuc_TENSV("trang tran thien than", "2001", "nam", HopDong_HODEM(2,2001,""))
+vc2 = VienChuc_TENSV("giang the an", "2001", "nam", HopDong_HODEM(7,2004,""))
+vc3 = VienChuc_TENSV("pho long an", "2001", "nam", HopDong_HODEM(12,2006,""))
+vc4 = VienChuc_TENSV("nguyen duc thien", "2001", "nam", HopDong_HODEM(6,2009,""))
+vc5 = VienChuc_TENSV("luong dinh tung", "2001", "nam", HopDong_HODEM(8,2010,""))
+vc6 = VienChuc_TENSV("nguyen thu tra", "2001", "nam", HopDong_HODEM(9,2001,""))
+vc7 = VienChuc_TENSV("pham minh giang", "2001", "nam", HopDong_HODEM(10,2012,""))
 
     #Phần 2, #Phần 3:
 lst = []
@@ -94,16 +100,9 @@ for i in lst:
     #Phần 4:
 
     #Phần 5:
-    
+# Làm nốt phần này
 
 
 
 
 
-# Sap xep dua theo do tuoi 
-# input(arr)
-# output(arr da sap xep)
-
-# Top K
-# input(array)
-# output( (array 2 luu K ptu lon nhat cua array)
