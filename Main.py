@@ -67,23 +67,35 @@ class VienChuc_TENSV:
         self.tuoi = tinh_tuoi_MSSV(self.namsinh)
         self.hopdong = hopdong
     def __str__(self):
-        return self.ten +" "+ self.namsinh +" "+self.gioitinh
+        return self.ten +" "+ self.namsinh +" "+self.gioitinh +" "+str(self.hopdong.month)
      
 
-vc1 = VienChuc_TENSV("pham minh thang", "2001", "nam", HopDong_HODEM(2,2001,"")) # ví dụ
+ # ví dụ
 # vc2 = VienChuc_TENSV("giang the an", "1999", "nam")
 # vc3 = VienChuc_TENSV("pho long an", "2003", "nam")
 
+
+
+    
+# PHẦN THAO TÁC:
+
+    #Phần 1: Nhập liệu
+vc1 = VienChuc_TENSV("pham minh thang", "2001", "nam", HopDong_HODEM(2,2001,""))
+
+    #Phần 2, #Phần 3:
 lst = []
 lst.append(vc1)
 # lst.append(vc2)
 # lst.append(vc3)
 lst.sort(key=lambda x : x.namsinh,reverse= True) # sắp xếp theo độ tuổi giảm dần
 for i in lst:
-    print (i.ten)
+    print (i)
 
+    #Phần 4:
+
+    #Phần 5:
     
-# PHẦN THAO TÁC:
+
 
 
 
