@@ -63,15 +63,15 @@ class VienChuc_TENSV:
     def __str__(self):
         return self.ten +" "+ self.namsinh +" "+self.gioitinh
      
-vc1 = VienChuc_TENSV("pham minh thang", "2001", "nam")
-vc2 = VienChuc_TENSV("giang the an", "2002", "nam")
+vc1 = VienChuc_TENSV("pham minh thang", "2001", "nam") # ví dụ
+vc2 = VienChuc_TENSV("giang the an", "1999", "nam")
 vc3 = VienChuc_TENSV("pho long an", "2003", "nam")
 
 lst = []
 lst.append(vc1)
 lst.append(vc2)
 lst.append(vc3)
-lst.sort(key=lambda x : x[1],reverse= False)
+lst.sort(key=lambda x : x.namsinh,reverse= True) # sắp xếp theo độ tuổi giảm dần
 for i in lst:
     print (i)
 class HopDong_HODEM:
